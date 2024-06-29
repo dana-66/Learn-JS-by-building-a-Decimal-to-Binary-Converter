@@ -101,7 +101,7 @@ const showAnimation = () => {
             document.getElementById(obj.inputVal).remove();
         }, obj.removeElDelay);
     });
-
+    
     setTimeout(() => {
         result.textContent = decimalToBinary(5);
     }, 20000);
@@ -110,7 +110,7 @@ const showAnimation = () => {
 const checkUserInput = () => {
     const inputInt = parseInt(numberInput.value);
     // the first condition checks if its a falsy value or truthy
-    if (!numberInput.value || isNaN(inputInt) || inputInt < 0){
+    if (!numberInput.value || isNaN(inputInt) || inputInt < 0) {
         alert("Please provide a decimal number greater than or equal to 0");
         // the return will prevent future code from this function from running
         return
@@ -118,7 +118,7 @@ const checkUserInput = () => {
     if (inputInt === 5) {
         showAnimation();
         return;
-      }
+    }
 
     result.textContent = decimalToBinary(inputInt);
     numberInput.value = "";
@@ -131,4 +131,3 @@ numberInput.addEventListener("keydown", (e) => {
         checkUserInput();
     }
 });
-
